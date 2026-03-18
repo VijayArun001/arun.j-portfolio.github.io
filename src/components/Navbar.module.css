@@ -1,0 +1,220 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.1rem 0;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(248, 249, 251, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  padding: 0.75rem 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy-900);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.dot { color: var(--accent); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-decoration: none;
+  transition: color 0.18s;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: width 0.2s ease;
+}
+
+.link:hover { color: var(--navy-900); }
+.link:hover::after { width: 100%; }
+
+.active { color: var(--accent) !important; }
+.active::after { width: 100% !important; }
+
+.resumeBtn { font-size: 13px !important; padding: 8px 16px !important; }
+
+.menuToggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  padding: 7px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem var(--px) 1.5rem;
+}
+
+.mobileLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.mobileLink:last-of-type { margin-bottom: 1rem; }
+
+@media (max-width: 800px) {
+  .nav { display: none; }
+  .menuToggle { display: flex; }
+}
+
+/* ── Resume dropdown ─────────────────────────────────────── */
+.resumeWrap { position: relative; }
+
+.resumeBtn {
+  font-size: 13px !important;
+  padding: 8px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen { transform: rotate(180deg); }
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  min-width: 230px;
+  z-index: 200;
+  overflow: hidden;
+  animation: dropIn 0.15s ease;
+}
+
+.dropdownLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray-400);
+  padding: 10px 14px 6px;
+}
+
+.dropdownItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+  border-top: 1px solid var(--gray-100);
+}
+
+.dropdownItem:hover { background: var(--gray-50); }
+
+.dropdownIconRed {
+  width: 32px; height: 32px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.dropdownIconBlue {
+  width: 32px; height: 32px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.dropdownText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+}
+
+.dropdownTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+.dropdownSub {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.dropdownArrow { color: var(--gray-300); flex-shrink: 0; }
+
+.dropdownItem:hover .dropdownArrow { color: var(--accent); }
+
+/* Mobile downloads */
+.mobileDownloads {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.mobileDownloadBtn {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

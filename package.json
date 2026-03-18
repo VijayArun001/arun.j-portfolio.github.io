@@ -1,0 +1,31 @@
+{
+  "name": "arun-j-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "homepage": "https://VijayArun001.github.io/arun.j-portfolio.github.io",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@tanstack/react-query": "^5.28.0",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+}
