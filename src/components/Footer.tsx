@@ -6,7 +6,7 @@ const Footer = () => (
     <div className={`container ${styles.inner}`}>
       <div className={styles.brand}>
         <span className={styles.logo}>Arun<span className={styles.dot}>.</span>J</span>
-        <span className={styles.tagline}>Full Stack Developer · Chennai</span>
+        <span className={styles.tagline}>Front End Developer · Chennai</span>
       </div>
 
       <div className={styles.links}>

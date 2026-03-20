@@ -19,8 +19,8 @@ const About = () => {
             <h2 className="section-title">Turning ideas into<br />production software</h2>
             <div className={styles.bio}>
               <p>
-                I'm a <strong>Full Stack Developer</strong> based in Chennai, with a strong frontend
-                foundation and solid backend skills. I've spent 4 years building real-world
+                I'm a <strong>Front End Developer</strong> based in Chennai, with a strong frontend
+                foundation in React.js and solid backend skills. I've spent 3.11 years building real-world
                 applications — from healthcare platforms serving live users, to marketplace
                 apps published on the Freshworks ecosystem.
               </p>

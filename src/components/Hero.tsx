@@ -18,16 +18,14 @@ const Hero = () => {
         </h1>
 
         <h2 className={styles.subheading}>
-          Full Stack Developer
+          Front End Developer
           <span className={styles.subPipe}> | </span>
           <span className={styles.subTech}>React.js | Node.js</span>
         </h2>
 
-        <p className={styles.subStrong}>Frontend Strong</p>
-
         <p className={styles.description}>
-          <strong>Frontend-strong Full Stack Developer</strong> with{' '}
-          <strong>4 years of experience</strong> building and deploying
+          <strong>Front End Developer</strong> with{' '}
+          <strong>3.11 years of experience</strong> building and deploying
           production-grade web applications across{' '}
           <strong>healthcare and SaaS products</strong>. Core expertise in{' '}
           <strong>React.js and TypeScript</strong>, with solid backend
@@ -84,11 +82,11 @@ const Hero = () => {
         <div className={styles.card}>
           <div className={styles.cardRow}>
             <span className={styles.cardKey}>role</span>
-            <span className={styles.cardVal}>Full Stack Developer</span>
+            <span className={styles.cardVal}>Front End Developer</span>
           </div>
           <div className={styles.cardRow}>
             <span className={styles.cardKey}>experience</span>
-            <span className={styles.cardVal}>4 years</span>
+            <span className={styles.cardVal}>3.11 years</span>
           </div>
           <div className={styles.cardRow}>
             <span className={styles.cardKey}>focus</span>
@@ -111,7 +109,7 @@ const Hero = () => {
         </div>
 
         <div className={styles.techPills}>
-          {['React.js', 'Next.js', 'TypeScript', 'Node.js', 'Freshworks FDK', 'AWS'].map((t) => (
+          {['React.js', 'Node.js','Express', 'Next.js', 'TypeScript', 'Freshworks FDK', 'AWS microservices'].map((t) => (
             <span key={t} className={styles.pill}>{t}</span>
           ))}
         </div>
